@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Social Trade",
+  "description": "Auto clicks",
+  "version": "1.0",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+   "incognito": "split",
+  "content_scripts": [{
+    "matches": ["*://*.socialtrade.biz/*"],
+    "js": ["jquery.min.js", "content.js"]
+  }],
+  "browser_action": {
+    "popup": "Social Trade",
+	"default_icon": "icon.png"
+  },
+
+  "permissions": ["activeTab", "webNavigation"]
+}
